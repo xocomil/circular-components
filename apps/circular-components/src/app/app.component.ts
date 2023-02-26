@@ -1,12 +1,13 @@
-import { NxWelcomeComponent } from './nx-welcome.component';
 import { Component } from '@angular/core';
+import { ComponentAComponent, ComponentBComponent } from '@circular/components';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent],
   selector: 'circular-components-root',
-  templateUrl: './app.component.html',
+  template: `<h1>Circular Components</h1>
+    <circular-components-component-a />`,
   styleUrls: ['./app.component.scss'],
+  imports: [ComponentAComponent, ComponentBComponent],
 })
 export class AppComponent {
   title = 'circular-components';
